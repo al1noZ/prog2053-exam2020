@@ -7,7 +7,7 @@ class EditUser extends LitElement {
     };
   }
 
-  // could not update data in database, 
+  // could not update data in database, from what I can figure there seems to be a problem getting access to the database when writing to it new data
 
   render() {
     return html`
