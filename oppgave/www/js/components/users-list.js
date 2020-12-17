@@ -28,7 +28,7 @@ class UsersList extends LitElement {
     .then(data => this.users = data);
   }
 
-  setSelectedUser(e, user) {
+  setSelectedUser(selected, user) {
     user.pwd = ''
     user.oldPwd = ''
     this.selectedUser = user;
@@ -48,7 +48,7 @@ class UsersList extends LitElement {
         <div class="column">
           <h2>Brukere</h2>
           <ul>
-            ${this.users.map(user => html`<li @click="${(e) => this.setSelectedUser(e, user)}">${user.uname}</li>`)}
+            ${this.users.map(user => html`<li @click="${(selected) => this.setSelectedUser(selected, user)}">${user.uname}</li>`)}
           </ul>
         </div>
         <div class="column">
